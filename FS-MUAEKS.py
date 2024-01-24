@@ -310,7 +310,7 @@ def Trapdoor(pars:PARS) -> PARS:
 	S_R = randint(q, size = (n, l_R)) # size = (n, l_R)
 	E__W = randint(q, size = (m, l_R)) # size = (m, l_R)
 	tk = randint(q, size = (n, 1)) # size = (n, 1) # shape[1] can be a random positive integer
-	T_w = (E__W + dot(dot(B_W, asarray(Matrix(H_1(concatenate((*pk_S, *pk_R, tk), axis = 1), m)).inv()).astype("int") % q) % q, S_R) % q) % q # size = (m, l_R)
+	T_w = (E__W + dot((dot(B_W, asarray(Matrix(H_1(concatenate((*pk_S, *pk_R, tk), axis = 1), m)).inv()).astype("int") % q) % q).T, S_R) % q) % q # size = (m, l_R)
 	R__A = (randint(2, size = (m, m)) << 1) - 1 # size = (m, m)
 	R__B = (randint(2, size = (F_t.shape[1], m)) << 1) - 1 # size = (2m | 3m | 4m, m)
 	R__C = (randint(2, size = (m, m)) << 1) - 1 # size = (m, m)
