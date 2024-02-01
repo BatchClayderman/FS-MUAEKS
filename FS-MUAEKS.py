@@ -127,7 +127,7 @@ class PARS:
 
 
 # Child Functions #
-def H_1(message:array, m) -> array:
+def H_1(message:array, m:int) -> array:
 	message_bytes = message.tobytes()
 	sha256_hash = sha256()
 	sha256_hash.update(message_bytes)
