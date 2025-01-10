@@ -1,6 +1,6 @@
 # FS-MUAEKS
 
-"FS-MUAEKS.py": A Python script for implementing FS-MUAEKS. 
+This is the official implementation of the FS-MUAEKS scheme in Python programming language. 
 
 ## Option
 
